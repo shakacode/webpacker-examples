@@ -54,11 +54,10 @@ default: &default
 development:
   <<: *default
   compile: true
-
   # Verifies that correct packages and versions are installed by inspecting package.json, yarn.lock, and node_modules
   check_yarn_integrity: true
-
   public_output_path: webpack/development
+  extract_css: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
@@ -79,7 +78,6 @@ development:
       'Access-Control-Allow-Origin': '*'
     watch_options:
       ignored: '**/node_modules/**'
-
 
 test:
   <<: *default
