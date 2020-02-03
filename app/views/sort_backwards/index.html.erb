@@ -1,0 +1,27 @@
+<%= link_to "Home", root_path %>
+<hr/>
+
+<h1>Code Splitting, Script loaded after BODY, using only Lodash</h1>
+
+<form id="form">
+  <h1>MAGIC SORTER BACKWARDS using Lodash</h1>
+  <div class="inputs">
+    <input id="input1" type="number" value="33" />
+    <input id="input2" type="number" value="1" />
+    <input id="input3" type="number" value="99" />
+  </div>
+  <button>
+    Click to sort your numbers BACKWARDS.
+  </button>
+  <div id="results">
+
+  </div>
+</form>
+
+<% content_for :head do%>
+  <%= stylesheet_pack_tag("sort-backwards") %>
+<% end %>
+
+<% content_for :after_body do%>
+  <%= javascript_pack_tag("sort-backwards") %>
+<% end %>

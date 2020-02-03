@@ -6,7 +6,9 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
-    "bulma": "^0.8.0"
+    "bulma": "^0.8.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0"
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -28,6 +30,6 @@
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",
-    "lint-fix": "yarn run prettier-fix && yarn run eslint-fix && yarn run stylelint-fix"
+    "lint-fix": "yarn run prettier-fix && yarn run eslint-fix && yarn run stylelint-fix && rubocop -a"
   }
 }

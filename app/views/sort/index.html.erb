@@ -1,0 +1,38 @@
+<%= link_to "Home", root_path %>
+<hr/>
+
+<h1>Code Splitting, Script loaded in HEAD, with both Lodash and Moment</h1>
+
+<form id="number-form">
+  <h1>MAGIC SORTER using Lodash</h1>
+  <div class="inputs">
+    <input id="input1" class="input-number" type="number" value="33" />
+    <input id="input2" class="input-number" type="number" value="1" />
+    <input id="input3" class="input-number" type="number" value="99" />
+  </div>
+  <button>
+    Click to sort your numbers.
+  </button>
+  <div id="results">
+  </div>
+</form>
+<hr/>
+<form id="date-form">
+  <h1>Date Parser using Moment.js</h1>
+  <div class="inputs">
+    <input id="inputDate" class="input-date" type="string" value="" />
+  </div>
+  <button>
+    Click to parse your date
+  </button>
+  <div id="resultsDate">
+  </div>
+</form>
+
+<% content_for :head do%>
+  <%= stylesheet_pack_tag("sort") %>
+  <%= javascript_pack_tag("sort") %>
+<% end %>
+
+<% content_for :after_body do%>
+<% end %>
