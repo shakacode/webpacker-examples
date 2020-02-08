@@ -24,9 +24,11 @@
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-prettier": "^1.1.2",
+    "webpack-dashboard": "^3.2.0",
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
+    "dashboard": "webpack-dashboard -- bin/webpack-dev-server",
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",
