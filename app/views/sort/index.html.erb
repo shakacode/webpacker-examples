@@ -28,10 +28,15 @@
   <div id="resultsDate">
   </div>
 </form>
+<hr/>
+<p>
+  This screen uses 2 large JavaScript libraries, Lodash and Moment.
+</p>
+
 
 <% content_for :head do%>
-  <%= stylesheet_pack_tag("sort") %>
-  <%= javascript_pack_tag("sort") %>
+  <%= stylesheet_packs_with_chunks_tag("sort") %>
+  <%= javascript_packs_with_chunks_tag("sort") %>
 <% end %>
 
 <% content_for :after_body do%>

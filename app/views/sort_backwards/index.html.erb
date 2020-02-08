@@ -19,9 +19,9 @@
 </form>
 
 <% content_for :head do%>
-  <%= stylesheet_pack_tag("sort-backwards") %>
+  <%= stylesheet_packs_with_chunks_tag("sort-backwards") %>
 <% end %>
 
 <% content_for :after_body do%>
-  <%= javascript_pack_tag("sort-backwards") %>
+  <%= javascript_packs_with_chunks_tag("sort-backwards") %>
 <% end %>
