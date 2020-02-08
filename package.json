@@ -29,6 +29,7 @@
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",
-    "lint-fix": "yarn run prettier-fix && yarn run eslint-fix && yarn run stylelint-fix && rubocop -a"
+    "lint-fix": "yarn run prettier-fix && yarn run eslint-fix && yarn run stylelint-fix && rubocop -a",
+    "production": "( rm -rf public/webpack/production ; exit 0 ) && RAILS_ENV=production rake assets:precompile && bin/rails server -e production"
   }
 }

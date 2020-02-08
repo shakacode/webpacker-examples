@@ -25,7 +25,7 @@ const sortApp = () => {
     </h2>
   `;
   });
-}
+};
 
 const dateApp = () => {
   const inputDate = document.getElementById("inputDate");
@@ -43,7 +43,7 @@ const dateApp = () => {
       </h2>
     `;
   });
-}
+};
 
 const app = () => {
   sortApp();

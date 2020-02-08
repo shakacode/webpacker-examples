@@ -4,7 +4,7 @@
 <h1>Code Splitting, Script loaded in HEAD</h1>
 
 <form id="number-form">
-  <h1>MAGIC SORTER</h1>
+  <h1>MAGIC SORTER using Lodash</h1>
   <div class="inputs">
     <input id="input1" class="input-number" type="number" value="33" />
     <input id="input2" class="input-number" type="number" value="1" />
@@ -18,7 +18,7 @@
 </form>
 <hr/>
 <form id="date-form">
-  <h1>Date Parser</h1>
+  <h1>Date Parser using Moment.js</h1>
   <div class="inputs">
     <input id="inputDate" class="input-date" type="string" value="" />
   </div>
@@ -28,10 +28,15 @@
   <div id="resultsDate">
   </div>
 </form>
+<hr/>
+<p>
+  This screen uses 2 large JavaScript libraries, Lodash and Moment.
+</p>
+
 
 <% content_for :head do%>
-  <%= stylesheet_pack_tag("sort") %>
-  <%= javascript_pack_tag("sort") %>
+  <%= stylesheet_packs_with_chunks_tag("sort") %>
+  <%= javascript_packs_with_chunks_tag("sort") %>
 <% end %>
 
 <% content_for :after_body do%>
