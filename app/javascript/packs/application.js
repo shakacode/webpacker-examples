@@ -15,3 +15,6 @@
 // const imagePath = (name) => images(name, true)
 
 
+import "../src/globals";
+
+console.log("hello");
