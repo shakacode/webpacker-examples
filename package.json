@@ -1,5 +1,5 @@
 {
-  "name": "bare_1",
+  "name": "webpacker-examples",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
