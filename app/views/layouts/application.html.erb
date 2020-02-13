@@ -1,21 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Webpacker Examples</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en" xml:lang="en" xmlns= "http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Language" content="en">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%= yield :head %>
-  </head>
+<title>
+  <%= if content_for?(:title) then
+        yield(:title) + ' | '
+      end %>
+  rails/webpacker Examples
+</title>
 
-  <body>
-    <%= render "shared/navbar" %>
-    <section class="section">
-      <div class="container">
-        <%= yield %>
-      </div>
-    </section>
-  </body>
-  <%= yield :after_body %>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+
+<% if yield(:meta_description).present? %>
+    <meta name="description" content="<%= yield(:meta_description) %>" />
+  <% else %>
+    <meta name="description" content="Examples of how to extend and customize rails/webpacker." />
+  <% end %>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%= yield :head %>
+</head>
+
+<body>
+<%= render "shared/navbar" %>
+<section class="section">
+  <div class="container">
+    <%= yield %>
+  </div>
+</section>
+</body>
+<%= yield :after_body %>
 </html>
