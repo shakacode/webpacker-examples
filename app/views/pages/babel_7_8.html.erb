@@ -1,0 +1,78 @@
+<% content_for :head do %>
+  <%= stylesheet_packs_with_chunks_tag("babel-7-8-example") %>
+  <%= javascript_packs_with_chunks_tag("babel-7-8-example") %>
+<% end %>
+
+<h1 class="title">
+  Babel 7.8 Example
+</h1>
+
+<h2 class="title">
+  Updating to Babel 7.8 from Babel 7.7<br/>
+</h2>
+<p>
+Why update? For the full details, check out this blog post:
+</p>
+<a href="https://babeljs.io/blog/2020/01/11/7.8.0">
+  7.8.0 Released: ECMAScript 2020, .mjs configuration files and @babel/cli improvements
+</a>
+</p>
+<ol>
+  <li>
+    The nullish coalescing operator, '??', allows you to provide a fallback value when an
+    expression
+    evaluates to null or undefined.
+  </li>
+  <li>
+    The optional chaining operator, '?.' uses the same concept of 'nullish values', allowing
+    optional property accesses on values which could be nullish. It also supports optional
+    function
+    calls and computed properties.
+  </li>
+</ol>
+<br/>
+<br/>
+
+<h2 class="title">
+  Example
+</h2>
+<p>
+  Open up the console of your browser. You will see the result of executing some code like this.
+  Note, you can't run these commands in your browser unless your browser supports ECMA 2020!
+</p>
+
+<pre>
+  import "../src/globals";
+
+  const person = {};
+
+  // Null Coalescing
+  const name = person.fullName ?? "Anonymous";
+  console.log(`?? operator example: Hello, ${name}!`);
+
+  const element = { index: 0, value: "foo" };
+  const index = element.index ?? -1; //  0 :D
+  console.log(`?? operator example: index: ${index}.`);
+
+  const indexUsingOr = element.index || -1; // -1 :(
+  console.log(`Compared to || operator example: indexUsingOr: ${indexUsingOr}.`);
+
+  const city = person.address?.city; // person.address could be not defined
+  const isNeighbor = person.address?.isCloseTo(me);
+  const sayingHay = person.sayHayUsing?.("Twitter"); // The person.sayHayUsing method could be not defined
+
+  console.log(`city = ${city}, isNeighbor = ${isNeighbor}, sayingHay = ${sayingHay}`);
+  </pre>
+<br/>
+<br/>
+<h2 class="title">
+  Your console will show:
+</h2>
+
+<pre>
+  babel-7-8-example.js:6 ?? operator example: Hello, Anonymous!
+  ?? operator example: index: 0.
+  Compared to || operator example: indexUsingOr: -1.
+  city = undefined, isNeighbor = undefined, sayingHay = undefined
+</pre>
+

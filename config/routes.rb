@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'simple-html', to: 'pages#simple_html'
   get 'sort', to: 'sort#index'
   get 'sort-backwards', to: 'sort_backwards#index'
+  get 'babel-7-8', to: 'pages#babel_7_8'
 end
