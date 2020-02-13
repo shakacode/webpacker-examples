@@ -1,5 +1,10 @@
-<%= link_to "Home", root_path %>
-<hr/>
+<% content_for :head do%>
+  <%= stylesheet_packs_with_chunks_tag("sort") %>
+  <%= javascript_packs_with_chunks_tag("sort") %>
+<% end %>
+
+<% title "Code Splitting, Script loaded in HEAD, with both Lodash and Moment" %>
+<% description "Code Splitting, Script loaded in HEAD, with both Lodash and Moment, demonstrating why code-splitting is necessary with @rails/webpacker." %>
 
 <h1>Code Splitting, Script loaded in HEAD, with both Lodash and Moment</h1>
 
@@ -34,10 +39,3 @@
 </p>
 
 
-<% content_for :head do%>
-  <%= stylesheet_packs_with_chunks_tag("sort") %>
-  <%= javascript_packs_with_chunks_tag("sort") %>
-<% end %>
-
-<% content_for :after_body do%>
-<% end %>
