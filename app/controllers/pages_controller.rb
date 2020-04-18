@@ -3,5 +3,5 @@
 class PagesController < ApplicationController
   def index; end
 
-  def simple_html; end
+  def simple_show_bulma; end
 end
