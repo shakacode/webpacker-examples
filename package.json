@@ -29,7 +29,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "resolutions": {
-    "@babel/core": "^7.8.0"
+    "@babel/core": "^7.9.0"
   },
   "scripts": {
     "dashboard": "webpack-dashboard -- bin/webpack-dev-server",
