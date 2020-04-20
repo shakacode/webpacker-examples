@@ -8,7 +8,7 @@ environment.plugins.prepend("DashboardPlugin", new DashboardPlugin());
 const webpackConfiguration = environment.toWebpackConfig();
 
 // To inspect the webpackConfiguration, uncomment the next line
-// debugger;
+debugger;
 
 // Then run:
 // bin/webpack --debug
