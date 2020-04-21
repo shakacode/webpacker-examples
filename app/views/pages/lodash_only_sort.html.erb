@@ -1,13 +1,13 @@
 <% content_for :head do%>
-  <%= stylesheet_packs_with_chunks_tag("sort-backwards") %>
+  <%= stylesheet_packs_with_chunks_tag("lodash-only-sort") %>
 <% end %>
 
 <% content_for :after_body do%>
-  <%= javascript_packs_with_chunks_tag("sort-backwards") %>
+  <%= javascript_packs_with_chunks_tag("lodash-only-sort") %>
 <% end %>
 
 <% title "Code Splitting, Script loaded after BODY, using only Lodash" %>
-<% description "Code Splitting, Script loaded in HEAD, with both Lodash and Moment, demonstrating how JavaScript can be loaded after the HTML with @rails/webpacker." %>
+<% description "Code Splitting, Script loaded in HEAD, with only Lodash, demonstrating how JavaScript can be loaded after the HTML with @rails/webpacker." %>
 
 <h1>Code Splitting, Script loaded after BODY, using only Lodash</h1>
 
