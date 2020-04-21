@@ -31,3 +31,10 @@ performance locally.
 ```bash
 ( rm -rf public/webpack/production ; exit 0 ) && RAILS_ENV=production rake assets:precompile && bin/rails server -e production
 ```
+
+## Bundle Analysis
+Run
+```bash
+NODE_ENV=production bin/webpack --profile --json > stats.json
+```
+(or `yarn analyze-bundle`)

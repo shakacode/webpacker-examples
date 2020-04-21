@@ -9,7 +9,8 @@
     "@rails/webpacker": "^5.1.1",
     "bulma": "^0.8.2",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "webpack-bundle-analyzer": "^3.7.0"
   },
   "version": "0.1.0",
   "devDependencies": {
@@ -32,6 +33,7 @@
     "@babel/core": "^7.9.0"
   },
   "scripts": {
+    "analyze-bundle": "NODE_ENV=production bin/webpack --profile --json > stats.json",
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",
