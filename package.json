@@ -33,7 +33,7 @@
     "@babel/core": "^7.9.0"
   },
   "scripts": {
-    "analyze-bundle": "bin/webpack --profile --json > stats.json",
+    "analyze-bundle": "NODE_ENV=production bin/webpack --profile --json > stats.json",
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",

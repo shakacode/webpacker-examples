@@ -35,6 +35,6 @@ performance locally.
 ## Bundle Analysis
 Run
 ```bash
-bin/webpack --profile --json > stats.json
+NODE_ENV=production bin/webpack --profile --json > stats.json
 ```
 (or `yarn analyze-bundle`)
