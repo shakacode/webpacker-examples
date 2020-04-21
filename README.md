@@ -1,24 +1,33 @@
-# README
+# ShakaCode Webpacker Examples
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+``` 
+bundle
+yarn
+``` 
 
-* Ruby version
+## Running
 
-* System dependencies
+Use `foreman` or `overmind` to run one of the following Procfiles, like
 
-* Configuration
+```
+overmind start -f Procfile.dev
+```
 
-* Database creation
+## Procfile.dev
+This setup uses the webpack-dev-server.
 
-* Database initialization
+## Procfile.dev-static
+This setup uses the webpack via webpack compiling in watch mode.
 
-* How to run the test suite
+## Procfile
+The production setup if you deploy to Heroku.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Procfile.production
+The setup that first precompiles all assets so that you can check the true production-like
+performance locally.
 
-* Deployment instructions
-
-* ...
+```bash
+( rm -rf public/webpack/production ; exit 0 ) && RAILS_ENV=production rake assets:precompile && bin/rails server -e production
+```
