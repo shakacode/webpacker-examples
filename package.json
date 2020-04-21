@@ -32,7 +32,6 @@
     "@babel/core": "^7.9.0"
   },
   "scripts": {
-    "dashboard": "webpack-dashboard -- bin/webpack-dev-server",
     "eslint-fix": "eslint . --fix --ext '.js,.jsx'",
     "prettier-fix": "prettier \"app/javascript/**/*.@(js|jsx)\" \"config/webpack/**/**.js\" --write",
     "stylelint-fix": "stylelint --fix \"app/javascript/**/*.*css\"",
