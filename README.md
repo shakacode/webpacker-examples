@@ -33,6 +33,14 @@ performance locally.
 ```
 
 ## Bundle Analysis
+In config/webpack/environment.js
+
+```js
+// Uncomment to do bundle analysis
+// const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+// environment.plugins.prepend("BundleAnalyzerPlugin", new BundleAnalyzerPlugin());
+```
+
 Run
 ```bash
 NODE_ENV=production bin/webpack --profile --json > stats.json
