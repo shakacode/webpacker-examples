@@ -8,7 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^5.1.1",
     "bulma": "^0.8.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "webpack-bundle-analyzer": "^3.7.0"
   },
